@@ -15,9 +15,8 @@ function encrypt() {
 
 
     Pmsg= document.getElementById('msg').value ;
-  const c = m ** e % n;
-
-  document.getElementById("result").innerHTML+=c ; 
+    const c = expmod(Pmsg,e,n);
+  document.getElementById("result").innerText+=c ; // result is span inside result div
 
   return ;
 }
@@ -26,8 +25,19 @@ function encrypt() {
 function decrypt() {
 
     Cmsg= document.getElementById('msg').value ;
-  const m = Cmsg ** d % n;
-  document.getElementById("result").innerHTML+=m ; // m instead
-  console.log(m);
+  const p = expmod(Cmsg,d,n);
+  document.getElementById("result").innerText=p ; // سبان داخل دف الريزلت
+  //console.log(m);
   return ;
+}
+
+
+function expmod( base, exp, mod ){
+  if (exp == 0) return 1;
+  if (exp % 2 == 0){
+    return Math.pow( expmod( base, (exp / 2), mod), 2) % mod;
+  }
+  else {
+    return (base * expmod( base, (exp - 1), mod)) % mod;
+  }
 }

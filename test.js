@@ -7,10 +7,14 @@ e = 17 ;
 d =89 ; 
 
 
+//note that msg should noy be larger than n 
+// sol اما اني ماادخل قيم اكبر من n 
+// او اني اغير قيم p , q , e ,d 
+
 
 //enc
 
-msg= 29 ; 
+msg= 456 ; 
 const c = expmod(msg,e,n);
 
 console.log("plaintext",msg,"cipher text is ",c);
@@ -25,7 +29,7 @@ p = expmod(c,d,n);
 console.log("cipher",c,"plain text is ",p);
 
 
-
+ 
 function expmod( base, exp, mod ){
     if (exp == 0) return 1;
     if (exp % 2 == 0){
