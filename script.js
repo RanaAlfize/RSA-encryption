@@ -11,7 +11,7 @@ d =89 ;
 
 
 
-function encrypt(e,n) {
+function encrypt() {
 
 
     Pmsg= document.getElementById('msg').value ;
@@ -23,11 +23,11 @@ function encrypt(e,n) {
 }
 
 
-function decrypt(n, d) {
+function decrypt() {
 
     Cmsg= document.getElementById('msg').value ;
   const m = Cmsg ** d % n;
-  document.getElementById("result").innerHTML+=c ; 
+  document.getElementById("result").innerHTML+=m ; // m instead
 
   return ;
 }
