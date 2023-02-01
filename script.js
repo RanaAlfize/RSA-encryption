@@ -28,6 +28,6 @@ function decrypt() {
     Cmsg= document.getElementById('msg').value ;
   const m = Cmsg ** d % n;
   document.getElementById("result").innerHTML+=m ; // m instead
-
+  console.log(m);
   return ;
 }

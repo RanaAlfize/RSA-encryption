@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <script src= "script.js"></script>
+    <script src= "test.js"></script>
 </head>
 <body>
     
@@ -22,7 +22,9 @@
   
   
   <form>
-        <input type="text" id="msg"class="form-control" placeholder="msg" >
+        <input type="text" id="msg"class="form-control" placeholder="msg" pattern="^[0-9]*" autofocus required title="ONLY INTEGERS ALLOWED">
+
+        
         <div class="input-group-append">
           <button class="btn btn-secondary" type="button" onclick="encrypt()">Encrypt</button>
         </div>
