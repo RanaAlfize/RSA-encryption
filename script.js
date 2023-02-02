@@ -26,14 +26,13 @@ function encrypt() {
   Pmsg= parseInt(msg);
     if (Pmsg > 226679 ){
     document.getElementById("output").setAttribute("value", "you are out of range friend :) try less"); 
-    document.getElementById("output").setAttribute("style", "color : red");   
-  
+    document.getElementById("output").setAttribute("style", "color : red");     
     return;
     }
     let c ;
     c=expmod(Pmsg,e,n); 
 
-  document.getElementById("output").setAttribute("value", c); // result is span inside result div
+  document.getElementById("output").setAttribute("value", c); 
 
   return ;
 }
