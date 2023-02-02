@@ -4,7 +4,7 @@
     <title>swe314</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <script src= "script.js"></script> -->
+    <script src= "script.js"></script>
 
 
 </head>
@@ -34,14 +34,16 @@
         <!-- <div class="sub-title">(RSA)</div> -->
         <div class="form">
             <form>
-                <label><span style="color:red;">*</span>Enter your Message: </label> 
+                <label><span style="color:red;">*</span>Enter your Message: </label> <br>
+                <label>Numrecial values only , within the range 0-226678</label> 
+
                 <!-- range  -->
                 <div class="text">
                   <i class="fa fa-file-text-o"></i>
                  <input type="text" maxlength="6"id="msg" class="input1"  placeholder="YOUR MESSAGE"pattern="^[0-9]*" autofocus required title="ONLY INTEGERS ALLOWED">
                 </div>
-                <button type="submit" class="encr"onclick="encrypt()">Encrypt</button>
-                <button type="submit" class="decr"onclick="decrypt()">Decrypt</button>
+                <button  type="button"class="encr"onclick="encrypt()">Encrypt</button>
+                <button  type="button"class="decr"onclick="decrypt()">Decrypt</button>
             </form>
               </div>
     </div>
@@ -68,7 +70,7 @@
                 <div class="row justify-content-center">
 
                 
-                    <p class="copyright">Developer by Danah, Rana, Waad, Alanood, Hessah, Yousra</p>
+                    <p class="copyright">Developed by Danah, Rana, Waad, Alanood, Hessah, Yousra</p>
 
                 </div>
 

@@ -4,7 +4,7 @@
 
 p=419; 
 q=541 ; 
-n = 226679 ;     // range from 0-226579
+n = 226679 ;     // range from 0-226678
 phiN = 225720 ; 
 e = 2737 ; 
 d =46513 ; 
@@ -22,14 +22,18 @@ d =46513 ;
 function encrypt() {
  
 
-    Pmsg= document.getElementById('msg').value ;
-
-    if (parseInt(Pmsg) > 226579 )
-    document.getElementById("output").innerText="you are out of range friend :)" ;  // 
+    msg= document.getElementById('msg').value ;
+  Pmsg= parseInt(msg);
+    if (Pmsg > 226679 ){
+    document.getElementById("output").setAttribute("value", "you are out of range friend :) try less"); 
+    document.getElementById("output").setAttribute("style", "color : red");   
+  
+    return;
+    }
     let c ;
     c=expmod(Pmsg,e,n); 
 
-  document.getElementById("output").innerText=c ; // result is span inside result div
+  document.getElementById("output").setAttribute("value", c); // result is span inside result div
 
   return ;
 }
@@ -37,12 +41,17 @@ function encrypt() {
 
 function decrypt() {
 
-    Cmsg= document.getElementById('msg').value ;
-    if (Cmsg > 226579 )
-    document.getElementById("output").innerText="you are out of range friend :)" ;  // 
+    msg= document.getElementById('msg').value ;
+    Cmsg= parseInt(msg);
+    if (Cmsg > 226679 ){
+    document.getElementById("output").setAttribute("value", "you are out of range friend :) try less");   
+    document.getElementById("output").setAttribute("style", "color : red");   
+
+    return;
+    }
     let p;
   p = expmod(Cmsg,d,n);
-  document.getElementById("output").innerText=p ;  
+  document.getElementById("output").setAttribute("value", p); 
   return ;
 }
 
