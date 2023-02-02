@@ -2,21 +2,34 @@
 
 
 
-p=19; 
-q=29 ; 
-n = 551 ;     
-phiN = 504 ; 
-e = 17 ; 
-d =89 ; 
+p=419; 
+q=541 ; 
+n = 226679 ;     // range from 0-226579
+phiN = 225720 ; 
+e = 2737 ; 
+d =46513 ; 
+
+
+// p=7 ;
+// q = 17 ; 
+// n = 119 ; 
+// phiN = 96 ; 
+// e=5 ;
+// d=77;
 
 
 
 function encrypt() {
-
+ 
 
     Pmsg= document.getElementById('msg').value ;
-    const c = expmod(Pmsg,e,n);
-  document.getElementById("result").innerText=c ; // result is span inside result div
+
+    if (parseInt(Pmsg) > 226579 )
+    document.getElementById("output").innerText="you are out of range friend :)" ;  // 
+    let c ;
+    c=expmod(Pmsg,e,n); 
+
+  document.getElementById("output").innerText=c ; // result is span inside result div
 
   return ;
 }
@@ -25,9 +38,11 @@ function encrypt() {
 function decrypt() {
 
     Cmsg= document.getElementById('msg').value ;
-  const p = expmod(Cmsg,d,n);
-  document.getElementById("result").innerText=p ; // سبان داخل دف الريزلت
-  //console.log(m);
+    if (Cmsg > 226579 )
+    document.getElementById("output").innerText="you are out of range friend :)" ;  // 
+    let p;
+  p = expmod(Cmsg,d,n);
+  document.getElementById("output").innerText=p ;  
   return ;
 }
 
