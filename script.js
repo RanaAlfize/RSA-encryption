@@ -16,7 +16,7 @@ function encrypt() {
 
     Pmsg= document.getElementById('msg').value ;
     const c = expmod(Pmsg,e,n);
-  document.getElementById("result").innerText+=c ; // result is span inside result div
+  document.getElementById("result").innerText=c ; // result is span inside result div
 
   return ;
 }
