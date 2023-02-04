@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src= "script.js"></script>
+</head>
+<body>
+    
+
+    <br>
+<div class="container">
+  
+  <div>
+    <h4>Simple RSA tool</h4>
+    <p><small> :) </small></p>
+    
+  </div>
+  
+  
+  <form>
+        <input  id="msg"class="form-control" placeholder="msg" pattern="^[0-9]*$" autofocus required title="ONLY INTEGERS ALLOWED"maxlength="6">
+
+        
+        <div class="input-group-append">
+          <button class="btn btn-secondary" type="button" onclick="encrypt()">Encrypt</button>
+        </div>
+
+        <div class="input-group-append">
+            <button class="btn btn-secondary" type="button" onclick="decrypt()">Decrypt</button>
+          </div> </form>
+           
+      
+      <p >Result :<span id="output"></span> </p>
+
+      
+
+ 
+</div>

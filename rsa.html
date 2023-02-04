@@ -37,12 +37,13 @@
                 <label><span style="color:red;">*</span>Enter your Message: </label> <br>
                 <label>Numrecial values only , within the range 0-226678</label> 
 
+                <!-- range  -->
                 <div class="text">
                   <i class="fa fa-file-text-o"></i>
-                 <input type="text" maxlength="6"id="msg"class="input1" placeholder="YOUR MESSAGE HERE"pattern="^[0-9]*" autofocus required title="ONLY INTEGERS ALLOWED">
+                 <input type="text" maxlength="6"id="msg" class="input1"  placeholder="YOUR MESSAGE"pattern="^[0-9]*" autofocus required title="ONLY INTEGERS ALLOWED">
                 </div>
-                <button  type="submit"class="encr"onclick="encrypt()">Encrypt</button>
-                <button  type="submit"class="decr"onclick="decrypt()">Decrypt</button>
+                <button  type="button"class="encr"onclick="encrypt()">Encrypt</button>
+                <button  type="button"class="decr"onclick="decrypt()">Decrypt</button>
             </form>
               </div>
     </div>
